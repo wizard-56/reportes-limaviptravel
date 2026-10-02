@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <title>Reporte de Campaña - Lima VIP Travel | Wizard 56</title>
+  <meta name="description" content="Reporte mensual y de avance para Lima VIP Travel: Auditoría de Google Ads, métricas de conversión, optimización geográfica y rendimiento técnico por Wizard 56." />
+  <meta property="og:title" content="Reporte de Campaña - Lima VIP Travel | Wizard 56" />
+  <meta property="og:description" content="Reporte ejecutivo de campaña Google Ads, balance mensual de conversiones, segmentación territorial y propuesta técnica de optimización." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { color-scheme: dark; scroll-behavior: smooth; }
+    body {
+      background-color: #000000;
+      color: #e4e4e7;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    ::selection { background-color: #f59e0b; color: #000000; }
+    a { color: #f59e0b; text-decoration: none; transition: color 0.15s; }
+    a:hover { color: #fbbf24; text-decoration: underline; }
+
+    .container { max-width: 1040px; margin: 0 auto; padding: 24px 20px 48px 20px; }
+
+    /* Header */
+    header { padding: 32px 0 20px 0; }
+    .logo-container { margin-bottom: 24px; display: flex; align-items: center; }
+    .logo-img { height: 56px; width: auto; object-fit: contain; }
+    .doc-title { font-size: 24px; font-weight: 900; color: #ffffff; letter-spacing: -0.02em; line-height: 1.25; }
+    .doc-title span { text-decoration: underline; text-decoration-color: #3f3f46; text-underline-offset: 6px; }
+    .meta-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #a1a1aa; margin-top: 14px; }
+    .meta-bar strong { color: #ffffff; font-weight: 700; letter-spacing: 0.04em; }
+    .meta-sep { color: #52525b; }
+    .meta-highlight { color: #fbbf24; font-weight: 600; }
+
+    /* Tabs Navigation */
+    .tabs-nav-wrapper {
+      margin: 24px 0 32px 0;
+      padding-bottom: 4px;
+    }
+    .tabs-nav {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      background: #09090b;
+      padding: 6px;
+      border-radius: 14px;
+      border: 1px solid #27272a;
+    }
+    @media (max-width: 640px) {
+      .tabs-nav { grid-template-columns: 1fr; gap: 8px; }
+    }
+    .tab-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 14px 18px;
+      background: transparent;
+      border: 1px solid transparent;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      color: #a1a1aa;
+      text-align: left;
+      font-family: inherit;
+      position: relative;
+    }
+    .tab-btn:hover {
+      background: #141418;
+      color: #ffffff;
+      border-color: #27272a;
+    }
+    .tab-btn.active {
+      background: #18181b;
+      border-color: #f59e0b;
+      color: #ffffff;
+      box-shadow: 0 4px 20px rgba(245, 158, 11, 0.14);
+    }
+    .tab-btn-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 4px;
+      width: 100%;
+    }
+    .tab-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: #f59e0b;
+      color: #000000;
+      text-transform: uppercase;
+    }
+    .tab-badge.secondary {
+      background: #27272a;
+      color: #a1a1aa;
+    }
+    .tab-btn.active .tab-badge.secondary {
+      background: #3f3f46;
+      color: #ffffff;
+    }
+    .tab-title {
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      color: #ffffff;
+    }
+    .tab-subtitle {
+      font-size: 12px;
+      color: #71717a;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .tab-btn.active .tab-subtitle {
+      color: #fbbf24;
+    }
+
+    /* Tab Panels */
+    .tab-panel {
+      display: none;
+      animation: fadeIn 0.25s ease forwards;
+    }
+    .tab-panel.active {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Summary ribbon */
+    .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 10px 0 36px 0; }
+    .summary-card { background: #09090b; border: 1px solid #27272a; border-radius: 14px; padding: 16px; display: flex; align-items: center; gap: 14px; }
+    .summary-icon { width: 38px; height: 38px; border-radius: 10px; background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.25); color: #f59e0b; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+    .summary-label { font-size: 11px; font-family: 'JetBrains Mono', monospace; color: #71717a; text-transform: uppercase; letter-spacing: 0.05em; display: block; }
+    .summary-val { font-size: 13.5px; font-weight: 700; color: #ffffff; display: block; margin-top: 2px; }
+
+    /* Section Highlights */
+    .section-title-wrap { margin-bottom: 18px; padding-bottom: 8px; border-bottom: 1px solid #18181b; }
+    .highlight-badge { background-color: #f59e0b; color: #000000; font-weight: 900; font-style: italic; padding: 4px 12px; font-size: 19px; letter-spacing: -0.01em; display: inline-block; border-radius: 2px; }
+    .section-intro { font-size: 14px; color: #d4d4d8; margin-top: 12px; line-height: 1.65; }
+
+    /* Cards */
+    .item-card { background: #09090b; border: 1px solid #27272a; border-radius: 16px; padding: 22px; margin-bottom: 24px; transition: border-color 0.2s; }
+    .item-card:hover { border-color: #3f3f46; }
+    .item-header { display: flex; gap: 14px; align-items: flex-start; }
+    .item-code { width: 32px; height: 32px; border-radius: 8px; background: rgba(245, 158, 11, 0.12); border: 1px solid rgba(245, 158, 11, 0.3); color: #f59e0b; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .item-title { font-size: 16px; font-weight: 800; color: #ffffff; }
+    .item-desc { font-size: 13.5px; color: #d4d4d8; margin-top: 5px; line-height: 1.6; }
+
+    /* Metrics */
+    .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin: 18px 0; }
+    .metric-box { background: #000000; border: 1px solid #27272a; border-radius: 10px; padding: 10px 12px; }
+    .metric-lbl { font-size: 10.5px; color: #a1a1aa; font-family: 'JetBrains Mono', monospace; display: block; }
+    .metric-val { font-size: 14px; font-weight: 700; font-family: 'JetBrains Mono', monospace; display: inline-block; padding: 2px 8px; border-radius: 6px; margin-top: 6px; }
+    .metric-val.green { color: #34d399; background: rgba(52, 211, 153, 0.1); border: 1px solid rgba(52, 211, 153, 0.3); }
+    .metric-val.yellow { color: #fbbf24; background: rgba(251, 191, 36, 0.1); border: 1px solid rgba(251, 191, 36, 0.3); }
+    .metric-val.red { color: #f87171; background: rgba(248, 113, 113, 0.1); border: 1px solid rgba(248, 113, 113, 0.3); }
+    .metric-val.blue { color: #60a5fa; background: rgba(96, 165, 250, 0.1); border: 1px solid rgba(96, 165, 250, 0.3); }
+    .metric-detail { font-size: 10px; color: #71717a; font-family: 'JetBrains Mono', monospace; display: block; margin-top: 3px; }
+
+    /* Thumbs Grid */
+    .thumbs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 14px;
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid #18181b;
+    }
+    .thumb-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: #000000;
+      border: 1px solid #27272a;
+      border-radius: 14px;
+      padding: 12px;
+      transition: all 0.2s ease;
+    }
+    .thumb-card:hover {
+      border-color: #3f3f46;
+    }
+    .thumb-box {
+      width: 100px; height: 100px; flex-shrink: 0;
+      background: #09090b; border: 1px solid #27272a; border-radius: 12px;
+      cursor: pointer; position: relative; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.5);
+    }
+    .thumb-box:hover { border-color: #f59e0b; transform: scale(1.03); box-shadow: 0 6px 20px rgba(245,158,11,0.2); }
+    .thumb-box img { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; }
+    .thumb-overlay {
+      position: absolute; inset: 0; background: rgba(0,0,0,0.75);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      opacity: 0; transition: opacity 0.2s ease; padding: 6px; text-align: center;
+    }
+    .thumb-box:hover .thumb-overlay { opacity: 1; }
+    .thumb-overlay span { font-size: 10px; font-weight: 800; color: #ffffff; text-transform: uppercase; letter-spacing: 0.05em; }
+    .thumb-info { font-size: 12px; color: #a1a1aa; flex: 1; min-width: 0; }
+    .thumb-info strong { color: #ffffff; display: block; margin-bottom: 4px; font-size: 12.5px; text-decoration: underline; text-decoration-color: #3f3f46; cursor: pointer; }
+    .thumb-info strong:hover { color: #f59e0b; }
+    .thumb-hint { font-size: 11px; color: #71717a; display: block; margin-top: 4px; }
+
+    /* Note & issues blocks */
+    .note-box { background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.25); border-radius: 10px; padding: 12px 14px; font-size: 12.5px; color: #d4d4d8; margin-top: 14px; }
+    .note-box strong { color: #fbbf24; }
+
+    /* Proposal options */
+    .proposal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin: 20px 0; }
+    .option-card { background: #000000; border: 1px solid #27272a; border-radius: 16px; padding: 22px; position: relative; display: flex; flex-direction: column; justify-content: space-between; }
+    .option-card.highlight { border-color: #f59e0b; box-shadow: 0 8px 30px rgba(245,158,11,0.12); }
+    .option-badge-rec {
+      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+      background: #f59e0b; color: #000000; font-size: 10px; font-weight: 900;
+      padding: 3px 14px; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.06em;
+      box-shadow: 0 4px 12px rgba(245,158,11,0.3); white-space: nowrap;
+    }
+    .price-tag { font-size: 24px; font-weight: 900; color: #ffffff; font-family: 'JetBrains Mono', monospace; }
+    .price-tag.green { color: #34d399; }
+    
+    .price-notice {
+      width: 100%;
+      padding: 12px 16px;
+      margin-top: 16px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      user-select: none;
+    }
+    .price-notice.primary {
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+    }
+    .price-notice.secondary {
+      background: #121215;
+      border: 1px solid #27272a;
+    }
+    .price-notice-label {
+      font-size: 11px;
+      font-family: 'JetBrains Mono', monospace;
+      color: #a1a1aa;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .price-notice-val {
+      font-size: 16px;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      color: #ffffff;
+    }
+    .price-notice.primary .price-notice-val {
+      color: #34d399;
+    }
+
+    /* Modal / Lightbox (Arrastrable con ratón y táctil en móviles) */
+    .modal-backdrop {
+      display: none; position: fixed; inset: 0; z-index: 9999;
+      background: rgba(0, 0, 0, 0.95); backdrop-filter: blur(8px);
+      align-items: center; justify-content: center; padding: 16px;
+    }
+    .modal-backdrop.active { display: flex; }
+    .modal-box {
+      width: 100%; max-width: 1100px; height: 90vh; background: #000000;
+      border: 1px solid #27272a; border-radius: 18px; display: flex; flex-direction: column;
+      overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.9);
+    }
+    .modal-topbar {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 20px; background: #09090b; border-bottom: 1px solid #18181b; flex-shrink: 0;
+    }
+    .modal-title { font-size: 13px; font-weight: 700; color: #ffffff; font-family: 'JetBrains Mono', monospace; }
+    .modal-controls { display: flex; align-items: center; gap: 8px; }
+    .modal-btn {
+      background: #18181b; border: 1px solid #27272a; color: #e4e4e7;
+      padding: 6px 12px; border-radius: 8px; font-size: 12px; font-weight: 600; cursor: pointer;
+      display: flex; align-items: center; gap: 6px; transition: all 0.15s; font-family: 'JetBrains Mono', monospace;
+    }
+    .modal-btn:hover { background: #27272a; color: #ffffff; border-color: #3f3f46; }
+    .modal-btn.close { background: #18181b; color: #f87171; border-color: #27272a; font-size: 14px; }
+    .modal-btn.close:hover { background: rgba(248, 113, 113, 0.15); border-color: #f87171; color: #ef4444; }
+    .modal-body {
+      flex: 1; overflow: hidden; padding: 16px; display: flex; align-items: center; justify-content: center;
+      cursor: grab; user-select: none; position: relative; touch-action: none;
+    }
+    .modal-body.grabbing { cursor: grabbing !important; }
+    .zoom-target {
+      transform-origin: center center;
+      display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;
+      user-select: none; will-change: transform;
+    }
+    .zoom-target img {
+      max-width: 95%; max-height: 85vh; object-fit: contain; border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+      pointer-events: none; -webkit-user-drag: none; user-select: none;
+    }
+    .modal-footer {
+      padding: 10px 20px; background: #09090b; border-top: 1px solid #18181b;
+      font-size: 11px; color: #71717a; display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 8px;
+    }
+
+    footer { padding: 40px 0 0 0; border-top: 1px solid #18181b; font-size: 12px; color: #71717a; }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+    .footer-col h4 { font-size: 12px; color: #ffffff; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 12px; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header General -->
+    <header>
+      <div class="logo-container">
+        <!-- Wizard 56 Logo Web -->
+        <a href="https://vortex-56.github.io/wizard-56" target="_blank" title="Visitar Wizard 56">
+          <img src="web.webp" alt="Wizard 56" class="logo-img" onerror="this.src='https://vortex-56.github.io/wizard-56/web.webp'">
+        </a>
+      </div>
+      <h1 class="doc-title">
+        <span id="mainDocTitle">REPORTE DE CAMPAÑA DEL MES DE SETIEMBRE - SETIEMBRE 2026:</span>
+      </h1>
+      <div class="meta-bar">
+        <div>Cliente: <strong>LIMA VIP TRAVEL</strong></div>
+        <span class="meta-sep">•</span>
+        <div>Proyecto: <span style="color:#e4e4e7;">Campaña Google Ads y Optimización de Rendimiento</span></div>
+        <span class="meta-sep">•</span>
+        <div>Fecha: <span class="meta-highlight" id="metaDate">Setiembre 2026 (Cierre Mensual)</span></div>
+        <span class="meta-sep">•</span>
+        <div><a href="https://limaviptravel.pe" target="_blank">limaviptravel.pe</a></div>
+      </div>
+    </header>
+
+    <!-- Barra de Pestañas / Tab Selector -->
+    <div class="tabs-nav-wrapper">
+      <div class="tabs-nav" role="tablist">
+        <button type="button" class="tab-btn active" id="tabBtnMonthly" onclick="switchReportTab('monthly')" role="tab" aria-selected="true">
+          <div class="tab-btn-header">
+            <span class="tab-badge">ACTUAL</span>
+            <span class="tab-title">Reporte Mensual SEP 2026</span>
+          </div>
+          <span class="tab-subtitle">Cierre de Mes • Balance de Conversiones y Optimización (02 Sep - 02 Oct)</span>
+        </button>
+
+        <button type="button" class="tab-btn" id="tabBtnInitial" onclick="switchReportTab('initial')" role="tab" aria-selected="false">
+          <div class="tab-btn-header">
+            <span class="tab-badge secondary">HISTÓRICO</span>
+            <span class="tab-title">Reporte Inicial SEP 2026</span>
+          </div>
+          <span class="tab-subtitle">Avance de Inicio • Diagnóstico de Carga y Propuesta Comercial</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- =================================================================== -->
+    <!-- PESTAÑA 1: REPORTE MENSUAL SEP 2026 (VISIBLE POR DEFECTO)           -->
+    <!-- =================================================================== -->
+    <div id="tabPanelMonthly" class="tab-panel active">
+
+      <!-- Ribbon Resumen Ejecutivo Mensual -->
+      <div class="summary-grid">
+        <div class="summary-card">
+          <div class="summary-icon">📈</div>
+          <div>
+            <span class="summary-label">Tendencia de Conversión</span>
+            <span class="summary-val" style="color:#34d399;">Hacia Estabilización</span>
+          </div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-icon">📅</div>
+          <div>
+            <span class="summary-label">Periodo Analizado</span>
+            <span class="summary-val">02 Sep – 02 Oct 2026</span>
+          </div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-icon">📍</div>
+          <div>
+            <span class="summary-label">Ubicaciones VIP</span>
+            <span class="summary-val">Aeropuerto / San Isidro / Miraflores</span>
+          </div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-icon">🎯</div>
+          <div>
+            <span class="summary-label">Punto de Inflexión</span>
+            <span class="summary-val">17 de Setiembre</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECCIÓN 1: EVIDENCIAS (REPORTE MENSUAL) -->
+      <section style="margin-bottom: 48px;">
+        <div class="section-title-wrap">
+          <span class="highlight-badge">Evidencias:</span>
+          <p class="section-intro">Registro cronológico de datos reales extraídos de la consola de Google Ads para LIMA VIP TRAVEL abarcando el periodo del <strong>2 de setiembre al 2 de octubre de 2026</strong>, evidenciando la evolución de conversiones, delimitación geográfica y ajuste de palabras clave.</p>
+        </div>
+
+        <!-- Evidencia 1.1: Evolución Temporal y Estabilización (c004-1 y c004-2) -->
+        <div class="item-card">
+          <div class="item-header">
+            <span class="item-code">1.1</span>
+            <div>
+              <h3 class="item-title">Evolución de Conversiones y Estabilización de la Curva (02 Sep – 02 Oct)</h3>
+              <p class="item-desc">Los datos generados a partir del 2 de setiembre hasta el 2 de octubre reflejan claramente dos etapas: durante la primera quincena las conversiones mostraban un comportamiento altamente irregular debido a la dispersión de búsquedas. Hacia el final del mes, tras la calibración técnica, las conversiones se vuelven notablemente más estables, consistentes y predecibles.</p>
+            </div>
+          </div>
+
+          <div class="metrics-grid">
+            <div class="metric-box">
+              <span class="metric-lbl">Periodo de Datos</span>
+              <span class="metric-val green">02 Sep – 02 Oct</span>
+              <span class="metric-detail">Mes completo auditado</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-lbl">Etapa Inicial</span>
+              <span class="metric-val yellow">Irregular</span>
+              <span class="metric-detail">Fluctuación normal en test</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-lbl">Cierre de Mes</span>
+              <span class="metric-val green">Estabilizado</span>
+              <span class="metric-detail">Tendencia más uniforme</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-lbl">Interacción Ads</span>
+              <span class="metric-val green">Constante</span>
+              <span class="metric-detail">Tráfico de intención</span>
+            </div>
+          </div>
+
+          <!-- Capturas 1.1 (c004-1 y c004-2) -->
+          <div class="thumbs-grid">
+            <div class="thumb-card">
+              <div class="thumb-box" onclick="openCaptureModal('/images/c004-1.JPG', 'Captura 1.1 - A: Curva Temporal de Conversiones (02 Sep - 02 Oct)')">
+                <img src="/images/c004-1.JPG" alt="Captura 1.1 - A" onerror="this.src='https://raw.githubusercontent.com/wizard-56/reportes-limaviptravel/main/images/c004-1.JPG'" />
+                <div class="thumb-overlay">
+                  <span>🔍 Ampliar</span>
+                </div>
+              </div>
+              <div class="thumb-info">
+                <strong onclick="openCaptureModal('/images/c004-1.JPG', 'Captura 1.1 - A: Curva Temporal de Conversiones (02 Sep - 02 Oct)')">[Captura 1.1 - A: Curva Temporal de Conversiones]</strong>
+                <span>Muestra los datos generados desde el 2 de setiembre hasta el 2 de octubre, evidenciando cómo las conversiones pasaron de ser irregulares al inicio a volverse estables hacia el cierre.</span>
+                <span class="thumb-hint">Clic para ampliar (arrastre disponible con ratón o dedo).</span>
+              </div>
+            </div>
+
+            <div class="thumb-card">
+              <div class="thumb-box" onclick="openCaptureModal('/images/c004-2.JPG', 'Captura 1.1 - B: Respaldo y Métricas Acumuladas de Campaña')">
+                <img src="/images/c004-2.JPG" alt="Captura 1.1 - B" onerror="this.src='https://raw.githubusercontent.com/wizard-56/reportes-limaviptravel/main/images/c004-2.JPG'" />
+                <div class="thumb-overlay">
+                  <span>🔍 Ampliar</span>
+                </div>
+              </div>
+              <div class="thumb-info">
+                <strong onclick="openCaptureModal('/images/c004-2.JPG', 'Captura 1.1 - B: Respaldo y Métricas Acumuladas de Campaña')">[Captura 1.1 - B: Respaldo y Métricas Acumuladas]</strong>
+                <span>Gráfica de respaldo que corrobora la estabilidad de la interacción publicitaria, volumen acumulado de impresiones y comportamiento del gasto publicitario.</span>
+                <span class="thumb-hint">Clic para ampliar (arrastre disponible con ratón o dedo).</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Evidencia 1.2: Ubicaciones Geográficas (c004-3) -->
+        <div class="item-card">
+          <div class="item-header">
+            <span class="item-code">1.2</span>
+            <div>
+              <h3 class="item-title">Configuración Geográfica Final: Concentración Exclusiva en 3 Zonas Clave</h3>
+              <p class="item-desc">Se implementó un filtrado territorial riguroso con inclusión y exclusión de zonas en Lima. La configuración final mantiene como únicas zonas activas: la zona del <strong>Aeropuerto Internacional Jorge Chávez</strong>, <strong>San Isidro</strong> y <strong>Miraflores</strong>, excluyendo el resto de distritos no rentables o ajenos al perfil ejecutivo. Esta hiper-especialización explica por qué los costos unitarios se elevaron (al competir en los nodos de mayor puja comercial), pero garantiza tráfico con genuino poder adquisitivo y alta intención de reserva.</p>
+            </div>
+          </div>
+
+          <div class="metrics-grid">
+            <div class="metric-box">
+              <span class="metric-lbl">Zonas Activas</span>
+              <span class="metric-val green">3 Ejes Premium</span>
+              <span class="metric-detail">Aeropuerto / S. Isidro / Miraflores</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-lbl">Zonas Excluidas</span>
+              <span class="metric-val red">Distritos No VIP</span>
+              <span class="metric-detail">Filtro de desperdicio</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-lbl">Comportamiento Costo</span>
+              <span class="metric-val yellow">Elevado por Zona</span>
+              <span class="metric-detail">Alta competencia de puja</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-lbl">Calidad de Contacto</span>
+              <span class="metric-val green">Corporativo / Turista</span>
+              <span class="metric-detail">Máxima intención de compra</span>
+            </div>
+          </div>
+
+          <!-- Captura 1.2 (c004-3) -->
+          <div class="thumbs-grid" style="grid-template-columns: 1fr;">
+            <div class="thumb-card">
+              <div class="thumb-box" onclick="openCaptureModal('/images/c004-3.JPG', 'Captura 1.2 - A: Configuración Final de Ubicaciones (Aeropuerto, San Isidro, Miraflores)')">
+                <img src="/images/c004-3.JPG" alt="Captura 1.2 - A" onerror="this.src='https://raw.githubusercontent.com/wizard-56/reportes-limaviptravel/main/images/c004-3.JPG'" />
+                <div class="thumb-overlay">
+                  <span>🔍 Ampliar</span>
+                </div>
+              </div>
+              <div class="thumb-info">
+                <strong onclick="openCaptureModal('/images/c004-3.JPG', 'Captura 1.2 - A: Configuración Final de Ubicaciones (Aeropuerto, San Isidro, Miraflores)')">[Captura 1.2 - A: Configuración Final de Ubicaciones Incluidas y Excluidas]</strong>
+                <span>Detalle de las ubicaciones geográficas de la campaña: se mantuvieron activas de forma exclusiva el Aeropuerto, San Isidro y Miraflores, blindando la inversión frente a solicitudes no calificadas.</span>
+                <span class="thumb-hint">Clic para ampliar (arrastre disponible con ratón o dedo).</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Evidencia 1.3: Palabras Clave y Punto de Inflexión 17 de Setiembre (c004-4) -->
+        <div class="item-card">
+          <div class="item-header">
+            <span class="item-code">1.3</span>
+            <div>
+              <h3 class="item-title">Configuración Final de Palabras Clave y Punto de Inflexión (17 de Setiembre)</h3>
+              <p class="item-desc">La lista de palabras clave actual representa una evolución cualitativa fundamental. El <strong>17 de setiembre</strong> marca el punto de referencia clave del mes: con anterioridad a esa fecha, las búsquedas ingresadas eran demasiado generales y dispersas. A partir del día 17 se consolidó una arquitectura de términos de búsqueda específica sobre la cual se proyecta una optimización continua del presupuesto.</p>
+            </div>
+          </div>
+
+          <div class="metrics-grid">
+            <div class="metric-box">
+              <span class="metric-lbl">Hito Técnico</span>
+              <span class="metric-val green">17 de Setiembre</span>
+              <span class="metric-detail">Referencia de optimización</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-lbl">Términos Previos</span>
+              <span class="metric-val yellow">Muy Generales</span>
+              <span class="metric-detail">Antes del 17 de setiembre</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-lbl">Configuración Actual</span>
+              <span class="metric-val green">Depurada</span>
+              <span class="metric-detail">Búsquedas cualificadas</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-lbl">Maduración Estadística</span>
+              <span class="metric-val blue">En Recopilación</span>
+              <span class="metric-detail">Requiere más tiempo</span>
+            </div>
+          </div>
+
+          <!-- Captura 1.3 (c004-4) -->
+          <div class="thumbs-grid" style="grid-template-columns: 1fr;">
+            <div class="thumb-card">
+              <div class="thumb-box" onclick="openCaptureModal('/images/c004-4.JPG', 'Captura 1.3 - A: Configuración Final de Palabras Clave (Hito 17 Sep)')">
+                <img src="/images/c004-4.JPG" alt="Captura 1.3 - A" onerror="this.src='https://raw.githubusercontent.com/wizard-56/reportes-limaviptravel/main/images/c004-4.JPG'" />
+                <div class="thumb-overlay">
+                  <span>🔍 Ampliar</span>
+                </div>
+              </div>
+              <div class="thumb-info">
+                <strong onclick="openCaptureModal('/images/c004-4.JPG', 'Captura 1.3 - A: Configuración Final de Palabras Clave (Hito 17 Sep)')">[Captura 1.3 - A: Configuración Final de Palabras Clave]</strong>
+                <span>Visualización de las palabras clave activas y concordancias finales, tomando como hito base los resultados y filtros instaurados a partir del 17 de setiembre.</span>
+                <span class="thumb-hint">Clic para ampliar (arrastre disponible con ratón o dedo).</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 2: DIAGNÓSTICO (REPORTE MENSUAL) -->
+      <section style="margin-bottom: 48px;">
+        <div class="section-title-wrap">
+          <span class="highlight-badge">Diagnóstico:</span>
+          <p class="section-intro">Análisis profesional de causa-efecto del rendimiento de la campaña publicitaria de LIMA VIP TRAVEL al cierre del mes de setiembre 2026.</p>
+        </div>
+
+        <!-- Diagnóstico 2.1: Estabilización y Costos por Ubicación -->
+        <div class="item-card">
+          <div class="item-header">
+            <span class="item-code">2.1</span>
+            <div>
+              <h3 class="item-title">Diagnóstico de Estabilización de Conversiones y Costos por Ubicación</h3>
+              <p class="item-desc">Al contrastar los registros de todo el mes, se constata que las conversiones pasaron de ser intermitentes e irregulares durante las primeras dos semanas a un patrón notablemente más uniforme hacia fin de mes. Este comportamiento es el resultado directo de la depuración progresiva del algoritmo de Google Ads.</p>
+              <p class="item-desc" style="margin-top:8px;"><strong>Causa del incremento en costos:</strong> La decisión técnica de restringir las ubicaciones activas exclusivamente a la zona del Aeropuerto, San Isidro y Miraflores es el motivo principal por el cual el costo por clic (CPC) y el costo general se elevaron. Estas tres zonas concentran la mayor densidad de anunciantes turísticos y corporativos de la capital, lo que genera subastas más competitivas. No obstante, este sobrecosto está justificado: evita derrochar presupuesto en distritos sin demanda ejecutiva y concentra la inversión donde efectivamente residen o aterrizan los pasajeros de alto valor.</p>
+            </div>
+          </div>
+
+          <div class="note-box">
+            <strong>Optimización en Marcha:</strong> Se están afinando continuamente los componentes de los anuncios y la velocidad de respuesta para que cada sol invertido en estas zonas hiper-específicas rinda al máximo posible.
+          </div>
+        </div>
+
+        <!-- Diagnóstico 2.2: Hito del 17 de Setiembre y Necesidad de Maduración Estadística -->
+        <div class="item-card">
+          <div class="item-header">
+            <span class="item-code">2.2</span>
+            <div>
+              <h3 class="item-title">Diagnóstico del Hito 17 de Setiembre y Maduración de Datos</h3>
+              <p class="item-desc">El 17 de setiembre constituye el mejor punto de referencia histórico de la cuenta. Las métricas previas al día 17 correspondían a búsquedas demasiado generales que no reflejaban el cliente ideal de LIMA VIP TRAVEL. La nueva configuración de palabras clave instaurada a partir del 17 es la base real desde la cual se observarán y medirán las mejoras.</p>
+              <p class="item-desc" style="margin-top:8px;"><strong>Prudencia técnica indispensable:</strong> Al 2 de octubre, aún es <strong>demasiado pronto para realizar modificaciones estructurales agresivas</strong>. En este momento todavía <strong>no existen suficientes evidencias estadísticas</strong> en variables críticas como:</p>
+              <ul style="margin: 10px 0 10px 20px; font-size: 13px; color: #d4d4d8; line-height: 1.6;">
+                <li>Rangos de edad y distribución por género.</li>
+                <li>Rendimiento diferenciado por día de la semana y franja horaria.</li>
+                <li>Volumen concluyente por tipo de dispositivo (ordenador vs. móvil).</li>
+                <li>Comportamiento acumulado de las nuevas palabras clave activas desde el día 17.</li>
+              </ul>
+              <p class="item-desc">Recibir más información consolidada sobre las ubicaciones permitirá destinar mayor porcentaje del presupuesto a los puntos con mejores resultados. Del mismo modo, aplicar cambios en edades o dispositivos sin una base de datos más robusta sería prematuro: <strong>hace falta más tiempo para mejorar y madurar las búsquedas</strong> con solidez científica.</p>
+            </div>
+          </div>
+
+          <div class="note-box" style="background:rgba(96,165,250,0.08); border-color:rgba(96,165,250,0.25);">
+            <strong style="color:#60a5fa;">Conclusión del Diagnóstico:</strong> La campaña ha entrado en su fase más valiosa. Cualquier alteración precipitada en edades, géneros o dispositivos interrumpiría la recolección de métricas clave justo cuando las conversiones han comenzado a estabilizarse.
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 3: RECOMENDACIONES (REPORTE MENSUAL) -->
+      <section style="margin-bottom: 48px;">
+        <div class="section-title-wrap">
+          <span class="highlight-badge">Recomendaciones:</span>
+          <p class="section-intro">Plan de acción estratégico para las próximas semanas de operación, enfocado en maduración analítica y optimización presupuestaria basada en evidencia.</p>
+        </div>
+
+        <!-- Recomendación 3.1: Mantener Estabilidad -->
+        <div class="item-card">
+          <div class="item-header">
+            <span class="item-code">3.1</span>
+            <div>
+              <h3 class="item-title">1. Mantener la Configuración Actual sin Cambios Precipitados</h3>
+              <p class="item-desc">Se recomienda enfáticamente dar continuidad a la configuración de palabras clave y segmentación actual instaurada desde el 17 de setiembre. No tocar las pujas ni forzar exclusiones de edad o género hasta completar un volumen estadísticamente significativo de conversiones en el sistema.</p>
+            </div>
+          </div>
+
+          <div style="margin-top: 14px; background:#000000; border:1px solid #27272a; border-radius:10px; padding:14px;">
+            <span style="font-size:11px; font-family:'JetBrains Mono',monospace; color:#34d399; font-weight:700; text-transform:uppercase;">Protocolo de Maduración Recomendado:</span>
+            <div style="display:flex; flex-direction:column; gap:8px; margin-top:8px; font-size:12.5px; color:#d4d4d8;">
+              <div>• <strong>Filtrado diario de términos no cualificados:</strong> Continuar agregando palabras clave negativas para proteger el presupuesto de clics irrelevantes sin reiniciar el aprendizaje.</div>
+              <div>• <strong>Monitoreo de estabilidad:</strong> Verificar que la regularidad de conversiones lograda a fin de setiembre se sostenga de forma continua.</div>
+              <div>• <strong>Preservación de segmentos:</strong> Dejar abiertas las edades y dispositivos durante las próximas semanas para recopilar la muestra completa.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recomendación 3.2: Reasignación Presupuestaria Futura -->
+        <div class="item-card" style="border-color:#f59e0b;">
+          <div class="item-header">
+            <span class="item-code">3.2</span>
+            <div>
+              <h3 class="item-title">2. Reasignación Estratégica de Presupuesto por Resultados de Ubicación</h3>
+              <p class="item-desc">Conforme los datos sigan acumulándose y revelen con claridad cuál de las tres ubicaciones activas (Aeropuerto, San Isidro o Miraflores) genera el menor costo por conversión y el mayor volumen de reservas ejecutivas, se procederá a transferir una mayor cuota del presupuesto publicitario a ese punto geográfico específico.</p>
+            </div>
+          </div>
+
+          <div class="note-box" style="margin-top:16px; background:rgba(245,158,11,0.06); border-color:rgba(245,158,11,0.3); padding:16px;">
+            <strong style="color:#f59e0b; display:block; font-size:13px; margin-bottom:6px;">HOJA DE RUTA TÉCNICA (WIZARD 56):</strong>
+            <p style="font-size:12.5px; line-height:1.6; color:#e4e4e7;">
+              1. <strong>Fase de Recopilación:</strong> Permitir que las palabras clave post-17 de setiembre acumulen al menos 15 a 20 días adicionales de interacción limpia.<br>
+              2. <strong>Fase de Ajuste Geográfico:</strong> Reasignar el presupuesto priorizando la zona con mejor tasa de conversión (Aeropuerto vs. Miraflores vs. San Isidro).<br>
+              3. <strong>Fase Demográfica y Dispositivos:</strong> Una vez confirmados los datos concluyentes, aplicar ajustes porcentuales de puja (+/- %) en los rangos de edad y dispositivos más rentables para maximizar el ROI.
+            </p>
+            <div style="margin-top:12px; padding-top:10px; border-top:1px solid rgba(245,158,11,0.2); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+              <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#a1a1aa;">Wizard 56 • Gestión Profesional de Rendimiento</span>
+              <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#71717a;">Informe para toma de decisiones ejecutivas en LIMA VIP TRAVEL</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+
+    <!-- =================================================================== -->
+    <!-- PESTAÑA 2: REPORTE INICIAL SEP 2026 (HISTÓRICO SIN MODIFICACIONES)  -->
+    <!-- =================================================================== -->
+    <div id="tabPanelInitial" class="tab-panel">
+
+      <!-- Executive Summary Ribbon Inicial -->
+      <div class="summary-grid">
+        <div class="summary-card">
+          <div class="summary-icon">⏳</div>
+          <div>
+            <span class="summary-label">Fase Actual</span>
+            <span class="summary-val">Aprendizaje Google Ads</span>
+          </div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-icon" style="color:#34d399; border-color:rgba(52,211,153,0.3); background:rgba(52,211,153,0.1);">⚡</div>
+          <div>
+            <span class="summary-label">Landing Page</span>
+            <span class="summary-val" style="color:#34d399;">91 Desk (Móvil a verde)</span>
+          </div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-icon">🎯</div>
+          <div>
+            <span class="summary-label">Estrategia</span>
+            <span class="summary-val">Maximizar Clics</span>
+          </div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-icon">🛡️</div>
+          <div>
+            <span class="summary-label">Próximo Hito</span>
+            <span class="summary-val">Estatus "Apto" en Ads</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECCIÓN 1: EVIDENCIAS (INICIAL) -->
+      <section style="margin-bottom: 48px;">
+        <div class="section-title-wrap">
+          <span class="highlight-badge">Evidencias:</span>
+          <p class="section-intro">A continuación, se presentan las evidencias del trabajo realizado durante esta primera fase del proyecto para LIMA VIP TRAVEL.</p>
+        </div>
+
+        <!-- Item 1.1: Landing Page -->
+        <div class="item-card">
+          <div class="item-header">
+            <span class="item-code">1.1</span>
+            <div>
+              <h3 class="item-title">Landing Page Instalada y en Proceso de Optimización</h3>
+              <p class="item-desc">Se ha instalado exitosamente la página de aterrizaje (subpágina /landing) en el servidor del cliente. La versión de escritorio ya se encuentra consolidada con métricas en verde, mientras que la versión móvil se encuentra en proceso continuo de optimización para que ambas queden con estadísticas 100% en verde.</p>
+            </div>
+          </div>
+
+          <div class="metrics-grid">
+            <div class="metric-box">
+              <span class="metric-lbl">Puntaje Ordenador</span>
+              <span class="metric-val green">91 / 100</span>
+              <span class="metric-detail">Todo en verde</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-lbl">Puntaje Móvil</span>
+              <span class="metric-val yellow">65 / 100</span>
+              <span class="metric-detail">En optimización a verde</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-lbl">Accesibilidad</span>
+              <span class="metric-val green">98 / 100</span>
+              <span class="metric-detail">Excelente en ambos</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-lbl">Prácticas Recomendadas</span>
+              <span class="metric-val green">100 / 100</span>
+              <span class="metric-detail">Máximo puntaje</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-lbl">SEO Técnico</span>
+              <span class="metric-val green">100 / 100</span>
+              <span class="metric-detail">Máximo puntaje</span>
+            </div>
+          </div>
+
+          <!-- Nota informativa sobre optimización activa -->
+          <div class="note-box" style="margin-top:14px; background:rgba(245,158,11,0.06); border-color:rgba(245,158,11,0.25);">
+            <strong style="color:#fbbf24; font-size:12px; display:block; margin-bottom:3px;">ESTADO DE OPTIMIZACIÓN EN CURSO:</strong>
+            <span style="font-size:12px; color:#d4d4d8; line-height:1.5;">
+              Esta es la información actual de la landing page. La primera captura refleja la versión de <strong>Escritorio (Ordenador)</strong>, donde todas las métricas están consolidadas en verde (Rendimiento 91, Accesibilidad 98, Prácticas 100, SEO 100). La segunda captura refleja la versión <strong>Móvil</strong> (actualmente en 65). Se aclara que la página aún se encuentra en proceso activo de optimización y afinación técnica, asegurando que al concluir el trabajo <strong>ambas versiones (escritorio y móvil) estarán con estadísticas 100% en verde</strong>.
+            </span>
+          </div>
+
+          <!-- Capturas de Referencia 1.1 (2 capturas: Ordenador y Móvil) -->
+          <div class="thumbs-grid">
+            <div class="thumb-card">
+              <div class="thumb-box" onclick="openCaptureModal('/images/c001-1.JPG', 'Captura 1.1 - A: Rendimiento en Ordenador / Escritorio')">
+                <img src="/images/c001-1.JPG" alt="Captura 1.1 - A" onerror="this.src='https://raw.githubusercontent.com/wizard-56/reursos-limaviptravel/main/c001-1.JPG'" />
+                <div class="thumb-overlay">
+                  <span>🔍 Ampliar</span>
+                </div>
+              </div>
+              <div class="thumb-info">
+                <strong onclick="openCaptureModal('/images/c001-1.JPG', 'Captura 1.1 - A: Rendimiento en Ordenador / Escritorio')">[Captura 1.1 - A: Ordenador]</strong>
+                <span>Rendimiento en 91/100, Accesibilidad 98, Prácticas 100 y SEO 100 (todas en verde).</span>
+                <span class="thumb-hint">Clic para ampliar en pantalla completa.</span>
+              </div>
+            </div>
+
+            <div class="thumb-card">
+              <div class="thumb-box" onclick="openCaptureModal('/images/c001-2.JPG', 'Captura 1.1 - B: Rendimiento en Móvil (En Optimización)')">
+                <img src="/images/c001-2.JPG" alt="Captura 1.1 - B" onerror="this.src='https://raw.githubusercontent.com/wizard-56/reursos-limaviptravel/main/c001-2.JPG'" />
+                <div class="thumb-overlay">
+                  <span>🔍 Ampliar</span>
+                </div>
+              </div>
+              <div class="thumb-info">
+                <strong onclick="openCaptureModal('/images/c001-2.JPG', 'Captura 1.1 - B: Rendimiento en Móvil (En Optimización)')">[Captura 1.1 - B: Móvil]</strong>
+                <span>Rendimiento actual en 65/100, Accesibilidad 98, Prácticas 100 y SEO 100 (en optimización hacia verde).</span>
+                <span class="thumb-hint">Clic para ampliar en pantalla completa.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 1.2: Campaña Google Ads -->
+        <div class="item-card">
+          <div class="item-header">
+            <span class="item-code">1.2</span>
+            <div>
+              <h3 class="item-title">Campaña de Google Ads Activa y en Aprendizaje</h3>
+              <p class="item-desc">La campaña de búsqueda ha sido configurada y aprobada. Actualmente se encuentra en la fase de "Aprendizaje", donde el algoritmo de Google está analizando los datos para optimizar las conversiones. Los objetivos de conversión (clics en botones) están correctamente vinculados mediante Google Tag Manager (GTM), funcionando en vista previa sin errores.</p>
+            </div>
+          </div>
+
+          <div class="metrics-grid">
+            <div class="metric-box">
+              <span class="metric-lbl">Estado de Campaña</span>
+              <span class="metric-val yellow">Aprendizaje</span>
+              <span class="metric-detail">Fase normal inicial</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-lbl">Medición GTM</span>
+              <span class="metric-val green">Activo</span>
+              <span class="metric-detail">Clics y Formularios</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-lbl">Estrategia</span>
+              <span class="metric-val green">Max Clics</span>
+              <span class="metric-detail">Tráfico cualificado</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-lbl">Anuncios</span>
+              <span class="metric-val green">Aprobados</span>
+              <span class="metric-detail">Calidad Buena/Excelente</span>
+            </div>
+          </div>
+
+          <!-- Capturas de Referencia 1.2 (2 capturas) -->
+          <div class="thumbs-grid">
+            <div class="thumb-card">
+              <div class="thumb-box" onclick="openCaptureModal('/images/c002-1.JPG', 'Captura 1.2 - A: Campaña Activa en Google Ads')">
+                <img src="/images/c002-1.JPG" alt="Captura 1.2 - A" onerror="this.src='https://raw.githubusercontent.com/wizard-56/reursos-limaviptravel/main/c002-1.JPG'" />
+                <div class="thumb-overlay">
+                  <span>🔍 Ampliar</span>
+                </div>
+              </div>
+              <div class="thumb-info">
+                <strong onclick="openCaptureModal('/images/c002-1.JPG', 'Captura 1.2 - A: Campaña Activa en Google Ads')">[Captura 1.2 - A]</strong>
+                <span>Panel de Google Ads mostrando campaña activa y fase de aprendizaje.</span>
+                <span class="thumb-hint">Clic para ampliar en pantalla completa.</span>
+              </div>
+            </div>
+
+            <div class="thumb-card">
+              <div class="thumb-box" onclick="openCaptureModal('/images/c002-2.JPG', 'Captura 1.2 - B: Curva de Inversión y Estadísticas de Conversión')">
+                <img src="/images/c002-2.JPG" alt="Captura 1.2 - B" onerror="this.src='https://raw.githubusercontent.com/wizard-56/reursos-limaviptravel/main/c002-2.JPG'" />
+                <div class="thumb-overlay">
+                  <span>🔍 Ampliar</span>
+                </div>
+              </div>
+              <div class="thumb-info">
+                <strong onclick="openCaptureModal('/images/c002-2.JPG', 'Captura 1.2 - B: Curva de Inversión y Estadísticas de Conversión')">[Captura 1.2 - B: Inversión y Conversiones]</strong>
+                <span>Curva de inversión y estadísticas de conversión registradas en la campaña activa de Google Ads.</span>
+                <span class="thumb-hint">Clic para ampliar en pantalla completa (arrastrable con ratón o dedo).</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 2: DIAGNÓSTICO (INICIAL) -->
+      <section style="margin-bottom: 48px;">
+        <div class="section-title-wrap">
+          <span class="highlight-badge">Diagnóstico:</span>
+          <p class="section-intro">Evaluación técnica detallada del rendimiento actual de la campaña de anuncios y de la infraestructura del sitio web principal limaviptravel.pe.</p>
+        </div>
+
+        <!-- Item 2.1: Diagnóstico de Campaña -->
+        <div class="item-card">
+          <div class="item-header">
+            <span class="item-code">2.1</span>
+            <div>
+              <h3 class="item-title">Diagnóstico de la Campaña Actual</h3>
+              <p class="item-desc">La campaña está generando datos de manera correcta. Es imperativo no realizar cambios estructurales (presupuesto, pujas, segmentación) durante al menos 1 a 2 semanas para permitir que el algoritmo de Google complete su fase de aprendizaje.</p>
+              <p class="item-desc" style="margin-top:8px;">Cualquier cambio prematuro reiniciaría este proceso y retrasaría la optimización. La recomendación técnica es dejar que el sistema acumule datos suficientes para luego aplicar filtros de palabras clave negativas y ajustes de rendimiento.</p>
+            </div>
+          </div>
+
+          <div class="note-box">
+            <strong>Regla de Oro en Aprendizaje:</strong> No tocar configuraciones de presupuesto ni pujas hasta alcanzar el estatus "Apto" estable con conversiones registradas.
+          </div>
+        </div>
+
+        <!-- Item 2.2: Diagnóstico Sitio Web Principal -->
+        <div class="item-card">
+          <div class="item-header">
+            <span class="item-code">2.2</span>
+            <div>
+              <h3 class="item-title">Diagnóstico del Sitio Web Principal (limaviptravel.pe)</h3>
+              <p class="item-desc">He realizado un análisis de rendimiento de la página de inicio principal, la cual fue creada en WordPress. Se han identificado áreas críticas que impactan directamente en el posicionamiento SEO y en el costo de los anuncios.</p>
+            </div>
+          </div>
+
+          <div class="metrics-grid">
+            <div class="metric-box">
+              <span class="metric-lbl">Speed Index Móvil</span>
+              <span class="metric-val red">14.2 seg</span>
+              <span class="metric-detail">Pantalla en blanco crítica</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-lbl">Total Blocking Time</span>
+              <span class="metric-val red">1,820 ms</span>
+              <span class="metric-detail">Bloqueo por plugins WP</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-lbl">Puntaje Móvil WP</span>
+              <span class="metric-val red">48 / 100</span>
+              <span class="metric-detail">Sitio actual</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-lbl">Nueva Landing</span>
+              <span class="metric-val green">91 Desk / 65 Móv*</span>
+              <span class="metric-detail">*Móvil en optimización a verde</span>
+            </div>
+          </div>
+
+          <!-- Capturas de Referencia 2.2 (3 capturas) -->
+          <div class="thumbs-grid">
+            <div class="thumb-card">
+              <div class="thumb-box" onclick="openCaptureModal('/images/c003-1.JPG', 'Captura 2.2 - A: Rendimiento Móvil WordPress')">
+                <img src="/images/c003-1.JPG" alt="Captura 2.2 - A" onerror="this.src='https://raw.githubusercontent.com/wizard-56/reursos-limaviptravel/main/c003-1.JPG'" />
+                <div class="thumb-overlay">
+                  <span>🔍 Ampliar</span>
+                </div>
+              </div>
+              <div class="thumb-info">
+                <strong onclick="openCaptureModal('/images/c003-1.JPG', 'Captura 2.2 - A: Rendimiento Móvil WordPress')">[Captura 2.2 - A]</strong>
+                <span>Evaluación de velocidad y sobrecarga de la web principal en WordPress.</span>
+                <span class="thumb-hint">Clic para ampliar en pantalla completa.</span>
+              </div>
+            </div>
+
+            <div class="thumb-card">
+              <div class="thumb-box" onclick="openCaptureModal('/images/c003-2.JPG', 'Captura 2.2 - B: Métricas Críticas de Bloqueo WordPress')">
+                <img src="/images/c003-2.JPG" alt="Captura 2.2 - B" onerror="this.src='https://raw.githubusercontent.com/wizard-56/reursos-limaviptravel/main/c003-2.JPG'" />
+                <div class="thumb-overlay">
+                  <span>🔍 Ampliar</span>
+                </div>
+              </div>
+              <div class="thumb-info">
+                <strong onclick="openCaptureModal('/images/c003-2.JPG', 'Captura 2.2 - B: Métricas Críticas de Bloqueo WordPress')">[Captura 2.2 - B]</strong>
+                <span>Tiempos de respuesta y recursos bloqueantes que impactan la conversión móvil.</span>
+                <span class="thumb-hint">Clic para ampliar en pantalla completa.</span>
+              </div>
+            </div>
+
+            <div class="thumb-card">
+              <div class="thumb-box" onclick="openCaptureModal('/images/c003-3.JPG', 'Captura 2.2 - C: Tiempo de Carga en Mobile (14s)')">
+                <img src="/images/c003-3.JPG" alt="Captura 2.2 - C" onerror="this.src='https://raw.githubusercontent.com/wizard-56/reursos-limaviptravel/main/c003-3.JPG'" />
+                <div class="thumb-overlay">
+                  <span>🔍 Ampliar</span>
+                </div>
+              </div>
+              <div class="thumb-info">
+                <strong onclick="openCaptureModal('/images/c003-3.JPG', 'Captura 2.2 - C: Tiempo de Carga en Mobile (14s)')">[Captura 2.2 - C]</strong>
+                <span>Demora crítica en mobile: la carga completa del index tarda más de 14 segundos.</span>
+                <span class="thumb-hint">Clic para ampliar en pantalla completa.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 3: RECOMENDACIONES Y PROPUESTA (INICIAL) -->
+      <section style="margin-bottom: 48px;">
+        <div class="section-title-wrap">
+          <span class="highlight-badge">Recomendaciones:</span>
+          <p class="section-intro">Plan estratégico de dos vertientes: estabilización de la inversión publicitaria y modernización de la plataforma digital para asegurar el máximo retorno.</p>
+        </div>
+
+        <!-- Item 3.1: Negativas -->
+        <div class="item-card">
+          <div class="item-header">
+            <span class="item-code">3.1</span>
+            <div>
+              <h3 class="item-title">Recomendaciones para la Campaña (Acción Inmediata)</h3>
+              <p class="item-desc">Mantener la campaña sin modificar hasta que el estado pase de "Aprendizaje" a "Apto". Posteriormente, se excluirán términos de búsqueda no cualificados.</p>
+            </div>
+          </div>
+
+          <div style="margin-top: 14px; background:#000000; border:1px solid #27272a; border-radius:10px; padding:14px;">
+            <span style="font-size:11px; font-family:'JetBrains Mono',monospace; color:#f87171; font-weight:700; text-transform:uppercase;">Términos a Excluir (Bloqueo de presupuesto desperdiciado):</span>
+            <div style="display:flex; flex-wrap:wrap; gap:6px; margin-top:8px;">
+              <span style="background:rgba(248,113,113,0.1); border:1px solid rgba(248,113,113,0.25); color:#f87171; font-size:11.5px; padding:3px 8px; border-radius:6px; font-family:'JetBrains Mono',monospace;">gratis</span>
+              <span style="background:rgba(248,113,113,0.1); border:1px solid rgba(248,113,113,0.25); color:#f87171; font-size:11.5px; padding:3px 8px; border-radius:6px; font-family:'JetBrains Mono',monospace;">empleo</span>
+              <span style="background:rgba(248,113,113,0.1); border:1px solid rgba(248,113,113,0.25); color:#f87171; font-size:11.5px; padding:3px 8px; border-radius:6px; font-family:'JetBrains Mono',monospace;">trabajo chofer</span>
+              <span style="background:rgba(248,113,113,0.1); border:1px solid rgba(248,113,113,0.25); color:#f87171; font-size:11.5px; padding:3px 8px; border-radius:6px; font-family:'JetBrains Mono',monospace;">comprar van</span>
+              <span style="background:rgba(248,113,113,0.1); border:1px solid rgba(248,113,113,0.25); color:#f87171; font-size:11.5px; padding:3px 8px; border-radius:6px; font-family:'JetBrains Mono',monospace;">h1 olx</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3.2: Propuesta Comercial -->
+        <div class="item-card" style="border-color:#f59e0b;">
+          <div class="item-header">
+            <span class="item-code">3.2</span>
+            <div>
+              <h3 class="item-title">Propuesta Comercial y Opciones de Servicio para LIMA VIP TRAVEL</h3>
+              <p class="item-desc">El descuento base se aplica porque ustedes ya cuentan con mi Plan de Mantenimiento Anual (S/ 150) por haber adquirido un servicio en el último año. Al contratar este nuevo desarrollo, no se les cobrará el mantenimiento del primer año, trasladando ese ahorro directamente al costo del proyecto.</p>
+            </div>
+          </div>
+
+          <div class="proposal-grid">
+            <!-- Opción 1 -->
+            <div class="option-card">
+              <div>
+                <span style="background:rgba(255,255,255,0.08); color:#a1a1aa; font-size:9.5px; font-weight:800; padding:2px 8px; border-radius:4px; text-transform:uppercase; display:inline-block; margin-bottom:8px;">Performance Básica</span>
+                <h4 style="font-size:15px; font-weight:800; color:#ffffff; margin-bottom:6px;">OPCIÓN 1: MIGRACIÓN A CÓDIGO PURO</h4>
+                <p style="font-size:12px; color:#a1a1aa; line-height:1.5; margin-bottom:12px;">Migrar el contenido actual de WordPress a código puro (HTML/CSS/JS) para mejorar la velocidad y el SEO. (No corrige la estructura actual, solo la performance técnica).</p>
+                
+                <div style="background:#09090b; border:1px solid #18181b; border-radius:8px; padding:10px; margin-bottom:12px; font-size:11.5px;">
+                  <div style="display:flex; justify-content:space-between; color:#71717a; text-decoration:line-through;">
+                    <span>Precio de Lista:</span>
+                    <span>S/ 450</span>
+                  </div>
+                  <div style="display:flex; justify-content:space-between; color:#34d399; margin-top:3px;">
+                    <span>Descuento Mantenimiento:</span>
+                    <span>- S/ 150</span>
+                  </div>
+                </div>
+
+                <div style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:12px;">
+                  <span style="font-size:11px; color:#71717a; text-transform:uppercase;">Inversión Final:</span>
+                  <span class="price-tag">S/ 300</span>
+                </div>
+
+                <ul style="list-style:none; font-size:11.5px; color:#d4d4d8; display:flex; flex-direction:column; gap:6px;">
+                  <li>✓ Eliminación de la sobrecarga de WordPress y plugins lentos</li>
+                  <li>✓ Mejora en tiempos de carga y métricas Core Web Vitals</li>
+                  <li>• No incluye rediseño de arquitectura de contenidos</li>
+                </ul>
+              </div>
+
+              <div class="price-notice secondary">
+                <span class="price-notice-label">Inversión Final:</span>
+                <span class="price-notice-val">S/ 300</span>
+              </div>
+            </div>
+
+            <!-- Opción 2 (RECOMENDADA) -->
+            <div class="option-card highlight">
+              <span class="option-badge-rec">OPCIÓN RECOMENDADA</span>
+              <div>
+                <span style="background:#f59e0b; color:#000000; font-size:9.5px; font-weight:900; padding:2px 8px; border-radius:4px; text-transform:uppercase; display:inline-block; margin-bottom:8px; margin-top:4px;">RECOMENDADA • MÁXIMO ROI</span>
+                <h4 style="font-size:15px; font-weight:800; color:#ffffff; margin-bottom:6px;">OPCIÓN 2: RENOVACIÓN DE WEB DE INICIO</h4>
+                <p style="font-size:12px; color:#a1a1aa; line-height:1.5; margin-bottom:12px;">Desarrollo de una nueva página de inicio con subpáginas internas, metadatos optimizados y estructura SEO profesional. Corrige los problemas de raíz y mejora el rendimiento general de toda la plataforma.</p>
+                
+                <div style="background:#09090b; border:1px solid #18181b; border-radius:8px; padding:10px; margin-bottom:12px; font-size:11.5px;">
+                  <div style="display:flex; justify-content:space-between; color:#71717a; text-decoration:line-through;">
+                    <span>Precio de Lista:</span>
+                    <span>S/ 750</span>
+                  </div>
+                  <div style="display:flex; justify-content:space-between; color:#34d399; margin-top:3px;">
+                    <span>Descuento Mantenimiento:</span>
+                    <span>- S/ 150</span>
+                  </div>
+                  <div style="display:flex; justify-content:space-between; color:#fbbf24; margin-top:2px;">
+                    <span>Descuento Especial:</span>
+                    <span>- S/ 100</span>
+                  </div>
+                </div>
+
+                <div style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:12px;">
+                  <span style="font-size:11px; color:#71717a; text-transform:uppercase;">Inversión Final:</span>
+                  <span class="price-tag green">S/ 500</span>
+                </div>
+
+                <ul style="list-style:none; font-size:11.5px; color:#d4d4d8; display:flex; flex-direction:column; gap:6px;">
+                  <li>✓ Estructura SEO desde cero para posicionar orgánicamente en Google</li>
+                  <li>✓ Código limpio y ultra rápido, Speed Index &lt; 2s</li>
+                  <li>✓ Mayor flexibilidad para futuras modificaciones y promociones</li>
+                  <li>✓ Preparado para integrarse perfectamente con Google Ads</li>
+                  <li>✓ Descuento adicional exclusivo de S/ 100 aplicado</li>
+                </ul>
+              </div>
+
+              <div class="price-notice primary">
+                <span class="price-notice-label">Inversión Final:</span>
+                <span class="price-notice-val">S/ 500</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recomendación Personal -->
+          <div class="note-box" style="margin-top:20px; background:rgba(245,158,11,0.06); border-color:rgba(245,158,11,0.3); padding:16px;">
+            <strong style="color:#f59e0b; display:block; font-size:13px; margin-bottom:6px;">RECOMENDACIÓN TÉCNICA:</strong>
+            <p style="font-size:12.5px; line-height:1.6; color:#e4e4e7;">
+              Optar por la <strong>OPCIÓN 2 (Renovación por S/ 500)</strong>. Si bien la migración (Opción 1) es más económica (S/ 300), la estructura actual de WordPress limita su potencial de posicionamiento. Invertir en una nueva estructura garantiza que tanto la publicidad paga como el tráfico orgánico converjan en una plataforma sólida, moderna y rápida, maximizando el retorno de inversión a futuro.
+            </p>
+            <div style="margin-top:12px; padding-top:10px; border-top:1px solid rgba(245,158,11,0.2); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+              <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#a1a1aa;">Wizard 56 • Consultoría de Alto Rendimiento</span>
+              <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#71717a;">Coordinación y consultas mediante los canales de contacto al pie del informe</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Footer General -->
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+            <img src="favicon.svg" alt="Wizard 56" style="width:28px; height:28px;" />
+            <strong style="color:#ffffff; font-size:14px;">Wizard 56</strong>
+          </div>
+          <p style="line-height:1.5; font-size:12px; color:#a1a1aa;">Desarrollo de campañas de Google Ads de alta conversión, landing pages de máximo rendimiento y soluciones digitales de alto impacto.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Canales de Contacto</h4>
+          <ul class="footer-links">
+            <li>Sitio Web: <a href="https://vortex-56.github.io/wizard-56" target="_blank">vortex-56.github.io/wizard-56</a></li>
+            <li>Correo Electrónico: <a href="mailto:system.wizard56@gmail.com">system.wizard56@gmail.com</a></li>
+            <li>Sitio del Cliente: <a href="https://limaviptravel.pe" target="_blank">limaviptravel.pe</a></li>
+          </ul>
+        </div>
+        <div class="footer-col" style="background:#09090b; border:1px solid #18181b; padding:14px; border-radius:12px;">
+          <h4 style="color:#34d399;">Atención Digital</h4>
+          <p style="font-size:11.5px; color:#a1a1aa; margin-bottom:10px;">Para coordinar las fases del proyecto o revisar detalles de la propuesta, visita nuestro portal web oficial o escríbenos directamente por correo.</p>
+          <a href="https://vortex-56.github.io/wizard-56" target="_blank" style="display:inline-block; background:#f59e0b; color:#000000; font-weight:800; font-size:11.5px; padding:6px 14px; border-radius:8px; text-decoration:none !important;">
+            Visitar Sitio Web Oficial (wizard-56)
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Lightbox Modal con Zoom (+ / - / 100% / Cerrar) y Arrastre -->
+  <div id="captureModal" class="modal-backdrop" onclick="if(event.target === this) closeCaptureModal()">
+    <div class="modal-box">
+      <div class="modal-topbar">
+        <div id="modalCaptureTitle" class="modal-title">[Captura]</div>
+        <div class="modal-controls">
+          <button class="modal-btn" onclick="zoomOut()" title="Alejar (-)">−</button>
+          <button class="modal-btn" onclick="resetZoom()" title="Tamaño 100%" id="zoomPercentBadge">100%</button>
+          <button class="modal-btn" onclick="zoomIn()" title="Acercar (+)">+</button>
+          <button class="modal-btn close" onclick="closeCaptureModal()" title="Cerrar (Esc)">✕</button>
+        </div>
+      </div>
+
+      <div class="modal-body" id="modalScrollBody" ondblclick="toggleDoubleZoom(event)">
+        <div class="zoom-target" id="zoomTarget">
+          <!-- Dynamic image rendered here -->
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <span>Arrastra con el <strong>clic</strong> o con el <strong>dedo</strong> para moverte • Botones <strong>+</strong> / <strong>−</strong> para zoom • Doble clic para ampliar</span>
+        <span>Pulsa <strong>ESC</strong> o <strong>✕</strong> para cerrar</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Tab switching logic
+    function switchReportTab(tabName) {
+      const btnMonthly = document.getElementById('tabBtnMonthly');
+      const btnInitial = document.getElementById('tabBtnInitial');
+      const panelMonthly = document.getElementById('tabPanelMonthly');
+      const panelInitial = document.getElementById('tabPanelInitial');
+      const mainDocTitle = document.getElementById('mainDocTitle');
+      const metaDate = document.getElementById('metaDate');
+
+      if (tabName === 'monthly') {
+        if (btnMonthly) {
+          btnMonthly.classList.add('active');
+          btnMonthly.setAttribute('aria-selected', 'true');
+        }
+        if (btnInitial) {
+          btnInitial.classList.remove('active');
+          btnInitial.setAttribute('aria-selected', 'false');
+        }
+        if (panelMonthly) panelMonthly.classList.add('active');
+        if (panelInitial) panelInitial.classList.remove('active');
+
+        if (mainDocTitle) {
+          mainDocTitle.innerText = 'REPORTE DE CAMPAÑA DEL MES DE SETIEMBRE - SETIEMBRE 2026:';
+        }
+        if (metaDate) {
+          metaDate.innerText = 'Setiembre 2026 (Cierre Mensual)';
+        }
+        history.replaceState(null, null, '#mensual');
+      } else {
+        if (btnInitial) {
+          btnInitial.classList.add('active');
+          btnInitial.setAttribute('aria-selected', 'true');
+        }
+        if (btnMonthly) {
+          btnMonthly.classList.remove('active');
+          btnMonthly.setAttribute('aria-selected', 'false');
+        }
+        if (panelInitial) panelInitial.classList.add('active');
+        if (panelMonthly) panelMonthly.classList.remove('active');
+
+        if (mainDocTitle) {
+          mainDocTitle.innerText = 'REPORTE DE AVANCE Y PROPUESTA DE OPTIMIZACIÓN - SETIEMBRE 2026:';
+        }
+        if (metaDate) {
+          metaDate.innerText = 'Setiembre 2026 (Auditoría Inicial)';
+        }
+        history.replaceState(null, null, '#inicial');
+      }
+    }
+
+    // Modal & Interactive Drag / Zoom
+    let currentZoom = 1.0;
+    let panX = 0;
+    let panY = 0;
+    let isDragging = false;
+    let startX = 0;
+    let startY = 0;
+    let touchStartDist = 0;
+    let touchStartZoom = 1.0;
+
+    function openCaptureModal(imageSrc, title) {
+      currentZoom = 1.0;
+      panX = 0;
+      panY = 0;
+      isDragging = false;
+      const modal = document.getElementById('captureModal');
+      const titleEl = document.getElementById('modalCaptureTitle');
+      const target = document.getElementById('zoomTarget');
+
+      if (titleEl) titleEl.innerText = title;
+      if (target) {
+        const filename = imageSrc.split('/').pop();
+        let fallback = '';
+        if (filename.startsWith('c004')) {
+          fallback = `https://raw.githubusercontent.com/wizard-56/reportes-limaviptravel/main/images/${filename}`;
+        } else {
+          fallback = `https://raw.githubusercontent.com/wizard-56/reursos-limaviptravel/main/${filename}`;
+        }
+        target.innerHTML = `<img src="${imageSrc}" alt="${title}" id="modalActiveImg" onerror="this.src='${fallback}'" />`;
+      }
+      applyTransform();
+
+      if (modal) modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeCaptureModal() {
+      const modal = document.getElementById('captureModal');
+      if (modal) modal.classList.remove('active');
+      document.body.style.overflow = '';
+      isDragging = false;
+      const modalBody = document.getElementById('modalScrollBody');
+      if (modalBody) modalBody.classList.remove('grabbing');
+    }
+
+    function zoomIn() {
+      if (currentZoom < 4.0) {
+        currentZoom = Math.min(4.0, +(currentZoom + 0.25).toFixed(2));
+        applyTransform();
+      }
+    }
+
+    function zoomOut() {
+      if (currentZoom > 0.5) {
+        currentZoom = Math.max(0.5, +(currentZoom - 0.25).toFixed(2));
+        applyTransform();
+      }
+    }
+
+    function resetZoom() {
+      currentZoom = 1.0;
+      panX = 0;
+      panY = 0;
+      applyTransform();
+    }
+
+    function toggleDoubleZoom(e) {
+      if (currentZoom === 1.0) {
+        currentZoom = 1.8;
+      } else {
+        currentZoom = 1.0;
+        panX = 0;
+        panY = 0;
+      }
+      applyTransform();
+    }
+
+    function applyTransform() {
+      const target = document.getElementById('zoomTarget');
+      const badge = document.getElementById('zoomPercentBadge');
+      if (target) {
+        target.style.transform = `translate(${panX}px, ${panY}px) scale(${currentZoom})`;
+      }
+      if (badge) {
+        badge.innerText = Math.round(currentZoom * 100) + '%';
+      }
+    }
+
+    // Interactive Dragging and Touch Handling
+    const modalBody = document.getElementById('modalScrollBody');
+
+    if (modalBody) {
+      // Mouse dragging
+      modalBody.addEventListener('mousedown', function(e) {
+        e.preventDefault();
+        isDragging = true;
+        startX = e.clientX - panX;
+        startY = e.clientY - panY;
+        modalBody.classList.add('grabbing');
+      });
+
+      window.addEventListener('mousemove', function(e) {
+        if (!isDragging) return;
+        panX = e.clientX - startX;
+        panY = e.clientY - startY;
+        applyTransform();
+      });
+
+      window.addEventListener('mouseup', function() {
+        if (isDragging) {
+          isDragging = false;
+          modalBody.classList.remove('grabbing');
+        }
+      });
+
+      // Mouse wheel zoom
+      modalBody.addEventListener('wheel', function(e) {
+        e.preventDefault();
+        if (e.deltaY < 0) {
+          zoomIn();
+        } else {
+          zoomOut();
+        }
+      }, { passive: false });
+
+      // Mobile Touch Dragging & Pinch to Zoom
+      modalBody.addEventListener('touchstart', function(e) {
+        if (e.touches.length === 1) {
+          isDragging = true;
+          startX = e.touches[0].clientX - panX;
+          startY = e.touches[0].clientY - panY;
+        } else if (e.touches.length === 2) {
+          isDragging = false;
+          touchStartDist = Math.hypot(
+            e.touches[0].clientX - e.touches[1].clientX,
+            e.touches[0].clientY - e.touches[1].clientY
+          );
+          touchStartZoom = currentZoom;
+        }
+      }, { passive: false });
+
+      modalBody.addEventListener('touchmove', function(e) {
+        if (e.touches.length === 1 && isDragging) {
+          e.preventDefault();
+          panX = e.touches[0].clientX - startX;
+          panY = e.touches[0].clientY - startY;
+          applyTransform();
+        } else if (e.touches.length === 2 && touchStartDist > 0) {
+          e.preventDefault();
+          const dist = Math.hypot(
+            e.touches[0].clientX - e.touches[1].clientX,
+            e.touches[0].clientY - e.touches[1].clientY
+          );
+          const factor = dist / touchStartDist;
+          currentZoom = Math.min(4.0, Math.max(0.5, +(touchStartZoom * factor).toFixed(2)));
+          applyTransform();
+        }
+      }, { passive: false });
+
+      modalBody.addEventListener('touchend', function(e) {
+        if (e.touches.length === 0) {
+          isDragging = false;
+        } else if (e.touches.length === 1) {
+          isDragging = true;
+          startX = e.touches[0].clientX - panX;
+          startY = e.touches[0].clientY - panY;
+        }
+      });
+    }
+
+    // Keyboard navigation (Escape to close, +/- to zoom, arrows to pan)
+    document.addEventListener('keydown', function(e) {
+      const modal = document.getElementById('captureModal');
+      if (!modal || !modal.classList.contains('active')) return;
+
+      if (e.key === 'Escape') {
+        closeCaptureModal();
+      } else if (e.key === '+' || e.key === '=') {
+        zoomIn();
+      } else if (e.key === '-') {
+        zoomOut();
+      } else if (e.key === '0') {
+        resetZoom();
+      } else if (e.key === 'ArrowLeft') {
+        panX += 40; applyTransform();
+      } else if (e.key === 'ArrowRight') {
+        panX -= 40; applyTransform();
+      } else if (e.key === 'ArrowUp') {
+        panY += 40; applyTransform();
+      } else if (e.key === 'ArrowDown') {
+        panY -= 40; applyTransform();
+      }
+    });
+
+    // Check hash on load (defaults to monthly)
+    window.addEventListener('DOMContentLoaded', function() {
+      if (window.location.hash === '#inicial') {
+        switchReportTab('initial');
+      } else {
+        switchReportTab('monthly');
+      }
+    });
+  </script>
+</body>
+</html>
